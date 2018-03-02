@@ -5,8 +5,8 @@
 # Copyright (c) 2018 The Authors, All Rights Reserved.
 
 
-package 'postgressql-server' do
-	notifies :run, 'execute[postgresql-init]'
+package 'postgresql-server' do
+	notifies :run, 'execute[postgresql-init]', :immediately
 end
 
 execute 'postgresql-init' do
